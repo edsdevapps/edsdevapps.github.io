@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | EDS DEV APPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--accent-orange);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .privacy-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .lang-btn {
+            padding: 8px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: var(--card-bg);
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--accent-orange);
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: #fff;
+        }
+
+        .privacy-section {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .privacy-section:hover {
+            border-color: rgba(249, 115, 22, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .section-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .privacy-section p,
+        .privacy-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background: rgba(249, 115, 22, 0.05);
+            border-left: 4px solid var(--accent-orange);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-text">EDS DEV APPS</div>
+            <nav style="display: flex; gap: 2rem; font-size: 0.875rem; font-weight: 600;">
+                <a href="../index.html" style="color: var(--text-primary); text-decoration: none;">Home</a>
+                <a href="mailto:eds.devapps@gmail.com"
+                    style="color: var(--text-secondary); text-decoration: none;">Support</a>
+            </nav>
+        </header>
+
+        <div class="privacy-container">
+            <div class="privacy-header">
+                <span class="badge">Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="subtitle">Last updated: April 2026</p>
+            </div>
+
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Türkçe</button>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="lang-content active" id="lang-en">
+                <div class="privacy-section">
+                    <span class="section-icon">📦</span>
+                    <h2>Data Storage</h2>
+                    <p>All inventory data you enter — including product names, quantities, expiration dates, and photos
+                        — is stored <strong>locally on your device</strong> using SQLite. We do not collect, transmit,
+                        or have access to any of this data.</p>
+                    <div class="highlight">Your data never leaves your device unless you explicitly export or share it.
+                    </div>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">📷</span>
+                    <h2>Camera & Gallery</h2>
+                    <p>The app requests camera and gallery permissions <strong>only</strong> when you choose to add a
+                        photo to a product. Photos are saved locally and are never uploaded to any server.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">🔔</span>
+                    <h2>Notifications</h2>
+                    <p>Notification permission is used solely to send <strong>local reminders</strong> for products
+                        nearing their expiration date. These notifications are generated on your device — no data is
+                        sent to any server. You can disable them anytime from your device settings.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">📢</span>
+                    <h2>Advertising (AdMob)</h2>
+                    <p>This app uses Google AdMob to display ads. AdMob may collect the following data to serve relevant
+                        ads:</p>
+                    <ul>
+                        <li>Advertising ID</li>
+                        <li>Approximate location</li>
+                        <li>Device information</li>
+                        <li>App interaction data</li>
+                    </ul>
+                    <p>This data is collected and processed by Google. Please refer to <a
+                            href="https://policies.google.com/privacy" style="color: var(--accent-orange);">Google's
+                            Privacy Policy</a> for details.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">✉️</span>
+                    <h2>Contact</h2>
+                    <p>If you have any questions about this privacy policy, please contact us at:</p>
+                    <p><strong>eds.devapps@gmail.com</strong></p>
+                </div>
+            </div>
+
+            <!-- TÜRKÇE -->
+            <div class="lang-content" id="lang-tr">
+                <div class="privacy-section">
+                    <span class="section-icon">📦</span>
+                    <h2>Veri Depolama</h2>
+                    <p>Ürün adları, miktarlar, son kullanma tarihleri ve fotoğraflar dahil girdiğiniz tüm envanter
+                        verileri, SQLite kullanılarak <strong>cihazınızda yerel olarak</strong> saklanır. Bu verileri
+                        toplamıyor, iletmiyor veya erişmiyoruz.</p>
+                    <div class="highlight">Verileriniz, siz özellikle dışa aktarma veya paylaşım yapmadıkça cihazınızdan
+                        çıkmaz.</div>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">📷</span>
+                    <h2>Kamera ve Galeri</h2>
+                    <p>Uygulama, kamera ve galeri iznini <strong>yalnızca</strong> bir ürüne fotoğraf eklemek
+                        istediğinizde talep eder. Fotoğraflar yerel olarak kaydedilir ve hiçbir sunucuya yüklenmez.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">🔔</span>
+                    <h2>Bildirimler</h2>
+                    <p>Bildirim izni yalnızca son kullanma tarihi yaklaşan ürünler için <strong>yerel
+                            hatırlatmalar</strong> göndermek amacıyla kullanılır. Bu bildirimler cihazınızda
+                        oluşturulur, herhangi bir sunucuya veri gönderilmez. Sistem ayarlarından istediğiniz zaman
+                        kapatabilirsiniz.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">📢</span>
+                    <h2>Reklamlar (AdMob)</h2>
+                    <p>Bu uygulama reklam göstermek için Google AdMob kullanmaktadır. AdMob, ilgili reklamlar sunmak
+                        için aşağıdaki verileri toplayabilir:</p>
+                    <ul>
+                        <li>Reklam kimliği</li>
+                        <li>Yaklaşık konum</li>
+                        <li>Cihaz bilgisi</li>
+                        <li>Uygulama etkileşim verileri</li>
+                    </ul>
+                    <p>Bu veriler Google tarafından toplanıp işlenmektedir. Ayrıntılar için <a
+                            href="https://policies.google.com/privacy" style="color: var(--accent-orange);">Google
+                            Gizlilik Politikası</a>'na bakabilirsiniz.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <span class="section-icon">✉️</span>
+                    <h2>İletişim</h2>
+                    <p>Bu gizlilik politikasıyla ilgili sorularınız için bizimle iletişime geçebilirsiniz:</p>
+                    <p><strong>eds.devapps@gmail.com</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo-text" style="font-size: 1rem;">EDS DEV APPS</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="../index.html" style="font-size: 0.75rem; color: var(--text-secondary);">Home</a>
+                <a href="../app-ads.txt" style="font-size: 0.75rem; color: var(--text-secondary);">app-ads.txt</a>
+                <p>&copy; 2026 EDS DEV APPS. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
